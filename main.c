@@ -9,7 +9,7 @@
 #include <sys/types.h>
 #include <pwd.h>
 #include <grp.h>
-
+#include "ProcStat.h"
 void this_function_read_processes_and_owners() { //TODO cos z tym zrobic
     char* fullpath;
     struct dirent* dp;
@@ -43,7 +43,10 @@ void this_function_read_processes_and_owners() { //TODO cos z tym zrobic
 
 int main() {
     logger_init("test.txt");
-
+    ProcStat* proc = procStat_create(1695);
+    procStat_write(proc, stdout);
+    printf("\n");
+    printf("%f", procStat_percent(proc));
     logger_close();
 }
 

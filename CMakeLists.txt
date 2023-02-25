@@ -9,4 +9,4 @@ set(SOURCE_DIR ${CMAKE_SOURCE_DIR}/Source)
 add_executable(processes main.c
         ${SOURCE_DIR}/Logger.c
         ${SOURCE_DIR}/Queue.c
-        ${SOURCE_DIR}/Reader.c Include/TermDefines.h Include/terminalPrint.h Source/terminalPrint.c Include/Analyzer.h Include/Printer.h Include/CpuStat.h Include/ProcStat.h)
+        ${SOURCE_DIR}/Reader.c Include/TermDefines.h Include/terminalPrint.h Source/terminalPrint.c Include/Analyzer.h Include/Printer.h Include/CpuStat.h Include/ProcStat.h Include/ProcInfo.h Source/ProcStat.c)
